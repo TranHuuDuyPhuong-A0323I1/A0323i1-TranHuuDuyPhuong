@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gọi thức uống</title>
+	<script>
+		function calculatePrice() {
+		
+			let drink = document.getElementById("drinkList").value;
+	
+			let price = document.getElementById("drinkList").options[document.getElementById("drinkList").selectedIndex].getAttribute("price");
+			
+			let quantity = document.getElementById("quantityInput").value;
+
+			let total_price = price * quantity;
+
+			if (total_price > 0) {
+				document.getElementById("result").innerHTML = "Bạn đã chọn " + quantity + " " + drink + ". Tổng số tiền bạn cần thanh toán là " + total_price + " VND.";
+			} else {
+				document.getElementById("result").innerHTML = "Vui lòng chọn một thức uống và nhập số lượng.";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Chào mừng bạn đến với quán cafe!</h1>
+	<p>Vui lòng chọn một thức uống bên dưới:</p>
+	<select name="drinkList" id="drinkList">
+		<option value="" price="0">--Chọn thức uống--</option>
+		<option value="Cafe" price="20000">Cafe - 20,000 VND</option>
+		<option value="Cam vắt" price="15000">Cam vắt - 15,000 VND</option>
+		<option value="Nước ép cà rốt" price="25000">Nước ép cà rốt - 25,000 VND</option>
+		<option value="Nước ép cà chua" price="30000">Nước ép cà chua - 30,000 VND</option>
+		<option value="Nước lọc" price="10000">Nước lọc - 10,000 VND</option>
+		<option value="Nước dừa" price="20000">Nước dừa - 20,000 VND</option>
+	</select>
+	<p>Nhập số lượng:</p>
+	<input type="number" id="quantityInput" value="1">
+	<button onclick="calculatePrice()">Gọi</button>
+	<p id="result"></p>
+</body>
+</html>
