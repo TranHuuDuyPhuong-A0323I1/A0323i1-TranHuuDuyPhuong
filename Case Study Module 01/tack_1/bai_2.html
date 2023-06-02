@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let kiemtra = prompt("Nhập một ký tự từ bảng chữ cái tiếng Anh:");
+        let chu = kiemtra.toLowerCase();
+
+        switch (chu) {
+            case "o":
+            case "u":
+            case "i":
+            case "a":
+            case "e":
+                document.write("Ký tự " + kiemtra + " là nguyên âm");
+                break;
+            default:
+                document.write("Ký tự " + kiemtra + " là phụ âm");
+                break;
+        }
+    </script>
+</body>
+
+</html>

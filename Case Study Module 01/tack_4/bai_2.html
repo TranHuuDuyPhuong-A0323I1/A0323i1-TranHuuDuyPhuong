@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+Ví dụ: s = &quot;cabca&quot;, thì kết quả differentSymbolsNaive(s) = 3.
+⇨ Có 3 kí tự khác nhau là a, b và c. -->
+    
+    <script>
+        function differentSymbolsNaive(str) {
+            const kitu = {};
+            for (let i = 0; i < str.length; i++) {
+                if (!kitu[str[i]]) {
+                    kitu[str[i]] = 1;
+                }
+            }
+            return Object.keys(kitu).length;
+        }
+        document.write(differentSymbolsNaive("cabca"));
+    </script>
+</body>
+
+</html>
