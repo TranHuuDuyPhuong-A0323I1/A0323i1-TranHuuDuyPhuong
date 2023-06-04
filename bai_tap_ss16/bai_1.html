@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <script>
+        class chuvidientich{
+            constructor(dai,rong){
+                this.dai=dai;
+                this.rong=rong;
+            }
+            get chuvi(){
+                return (this.dai+this.rong)*2;
+            }
+            get dientich(){
+                return this.dai*this.rong;
+            }
+        }
+        let chieudai = +prompt("nhập vào chiều dài");
+        let chieurong = +prompt("nhập vào chiều rộng");
+        let sodo = new chuvidientich(chieudai,chieurong);
+        let tinhdientich = sodo.dientich;
+        let tinhchuvi = sodo.chuvi;
+        document.write("chu vi là : "+ tinhchuvi +"<br>"+ " diện tích là : "+tinhdientich);
+    </script>
+</body>
+</html>  

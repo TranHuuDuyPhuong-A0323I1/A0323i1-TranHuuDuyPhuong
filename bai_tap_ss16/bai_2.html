@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="ketqua"></div> -->
+    <script>
+        class Temperature {
+            constructor(doC) {
+                this.doC = doC;
+            }
+            getdoC() {
+                return this.doC;
+            }
+            getDoF() {
+                return 9 / 5 * this.getdoC() + 32;
+            }
+            getDoKenvin() {
+                return this.getdoC() + 273.15;
+            }
+            toString() {
+                document.write(this.getDoF() + "<br>");
+                document.write(this.getDoKenvin());
+            }
+        }
+        let temperature = new Temperature(25);
+        temperature.toString();   
+    </script>
+</body>
+
+</html>
